@@ -4,7 +4,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -21,15 +20,31 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environment
+# Entornos virtuales
 venv/
+env/
 ENV/
+.env
 
-# IDE
+# IDEs y editores
 .idea/
 .vscode/
 *.swp
 *.swo
+.DS_Store
+
+# Archivos de datos
+*.xlsx
+*.csv
+*.log
+
+# Archivos de configuración local
+config.local.py
+*.local.json
+
+# Archivos temporales
+*.tmp
+*.temp
 
 # Jupyter Notebook
 .ipynb_checkpoints
