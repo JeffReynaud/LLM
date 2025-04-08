@@ -1,0 +1,88 @@
+INSTRUCCIONES PARA ANÁLISIS DE SENTIMIENTOS
+===========================================
+
+Este documento explica cómo ejecutar el análisis de sentimientos para cualquier archivo Excel con comentarios.
+
+REQUISITOS PREVIOS
+-----------------
+1. Tener Python instalado en el sistema
+2. Tener el entorno virtual configurado (ya está hecho)
+3. Tener todas las dependencias instaladas (ya están instaladas)
+
+PASO A PASO
+-----------
+
+1. PREPARACIÓN
+   -----------
+   a) Coloca el archivo Excel que quieres analizar en la misma carpeta donde está el script
+   b) Asegúrate que el archivo Excel tenga una columna con los comentarios
+      - Si la columna se llama "Comentario", el script la detectará automáticamente
+      - Si tiene otro nombre, el script te permitirá seleccionarla
+
+2. ACTIVAR EL ENTORNO VIRTUAL
+   -------------------------
+   a) Abre el Command Prompt (cmd.exe)
+      - Presiona Windows + R
+      - Escribe "cmd" y presiona Enter
+   
+   b) Navega al directorio del proyecto
+      - Copia y pega este comando:
+      cd "C:\Users\JeffersonReynaud\OneDrive - Flyjetsmart\Escritorio\Proyectos\9.- NPS-CSAT\CSAT_Analyst\LLM"
+      - Presiona Enter
+
+   c) Activa el entorno virtual
+      - Escribe: venv\Scripts\activate
+      - Presiona Enter
+      - Verás (venv) al inicio de la línea de comandos
+
+3. EJECUTAR EL ANÁLISIS
+   -------------------
+   a) Ejecuta el script
+      - Escribe: python sentiment_analysis.py
+      - Presiona Enter
+
+   b) Sigue las instrucciones en pantalla:
+      - Selecciona el número del archivo Excel que quieres analizar
+      - Si es necesario, selecciona la columna que contiene los comentarios
+      - Espera a que se complete el análisis
+
+4. RESULTADOS
+   ----------
+   a) El script generará un nuevo archivo Excel con el formato:
+      [nombre_archivo_original]_Analizado_[fecha_hora].xlsx
+   
+   b) El archivo de resultados contendrá:
+      - Los comentarios originales
+      - La clasificación (positivo/neutral/negativo)
+      - El score de confianza
+      - El resultado del modelo (estrellas)
+
+5. FINALIZAR
+   ---------
+   a) Para salir del entorno virtual
+      - Escribe: deactivate
+      - Presiona Enter
+
+NOTAS IMPORTANTES
+----------------
+- El proceso puede tardar varios minutos dependiendo de la cantidad de comentarios
+- Asegúrate de que el archivo Excel no esté abierto mientras se ejecuta el análisis
+- Si tienes problemas con la activación del entorno virtual, asegúrate de estar usando cmd.exe y no PowerShell
+
+SOLUCIÓN DE PROBLEMAS
+--------------------
+1. Si el entorno virtual no se activa:
+   - Asegúrate de estar usando cmd.exe y no PowerShell
+   - Verifica que estás en el directorio correcto
+
+2. Si hay error al cargar el archivo:
+   - Verifica que el archivo Excel no esté abierto
+   - Asegúrate que el archivo está en el directorio correcto
+   - Verifica que el archivo no está corrupto
+
+3. Si hay error en el análisis:
+   - Verifica que los comentarios están en texto plano
+   - Asegúrate que los comentarios no están vacíos
+   - Verifica que tienes conexión a internet (necesario para cargar el modelo)
+
+Para más ayuda o problemas específicos, contacta al desarrollador. 
